@@ -1,3 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
 body {
     background-color: aqua;
 }
+
+.button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 150px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    cursor: pointer;
+  }
+
+.popup {
+    width: 210px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  .popup p {
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .popup::before, .popup::after {
+    content: '';
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 10px solid black;
+    bottom: -20px;
+    left: calc(50% - 10px);
+  }
+  
+  .popup::after {
+    content: '';
+    border-top: 10px solid white;
+    bottom: -19px;
+  }
+  
+  .title-popup {
+    background-color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .text-popup {
+    background-color: #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
